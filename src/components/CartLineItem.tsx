@@ -11,10 +11,7 @@ type PropsType = {
 };
 
 const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
-  const img: string = new URL(
-    `../public/images/${item.sku}.jpg`,
-    import.meta.url
-  ).href;
+  const imgPath: string = `/images/${item.sku}.jpg`;
 
   const lineTotal: number = item.qty * item.price;
 
@@ -47,7 +44,7 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
 
   const content = (
     <li className="cart__item">
-      <img src={img} alt={item.name} className="cart__img" />
+      <img src={imgPath} alt={item.name} className="cart__img" />
       <div aria-label="Item Name">{item.name}</div>
       <div aria-label="Price Per Item">
         {new Intl.NumberFormat("en-US", {
