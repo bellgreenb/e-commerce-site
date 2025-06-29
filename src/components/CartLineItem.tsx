@@ -11,7 +11,7 @@ type PropsType = {
 };
 
 const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
-  const imgPath: string = `/images/${item.sku}.jpg`;
+  const imgPath: string = `/e-commerce-site/images/${item.sku}.jpg`;
 
   const lineTotal: number = item.qty * item.price;
 

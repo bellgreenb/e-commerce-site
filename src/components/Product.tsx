@@ -17,7 +17,7 @@ const Product = ({
   inCart,
 }: PropsType): ReactElement => {
   const img: string = new URL(
-    `../public/images/${product.sku}.jpg`,
+    `/e-commerce-site/images/${product.sku}.jpg`,
     import.meta.url
   ).href;
   console.log(img);
